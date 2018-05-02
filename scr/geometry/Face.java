@@ -19,6 +19,7 @@ public class Face {
             builder.append(p).append(" ");
         }
         return builder.toString();
+
     }
 
     public List<PolygonPoint> getPolygonPoints() {
