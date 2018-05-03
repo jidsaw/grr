@@ -4,6 +4,9 @@ import geometry.Face;
 import geometry.PolygonPoint;
 import geometry.Vector;
 import obj.ObjModel;
+import org.junit.Test;
+import org.junit.Assert.*;
+import junit.framework.Assert;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -149,6 +152,7 @@ public class RenderUtils {
                 int l1Den = (y1 - y0) * (x2 - x0) - (x1 - x0) * (y2 - y0);
                 int l2Num = (y - y1) * (x0 - x1) - (x - x1) * (y0 - y1);
                 int l2Den = (y2 - y1) * (x0 - x1) - (x2 - x1) * (y0 - y1);
+                org.junit.Assert.assertTrue(1 == l0Num/l0Den+l1Num/l1Den+l2Num/l2Den);
                 if (l0Num * l0Den < 0 || l1Num * l1Den < 0 || l2Num * l2Den < 0) {
                     continue;
                 }
